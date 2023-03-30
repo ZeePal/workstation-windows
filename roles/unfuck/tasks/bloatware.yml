@@ -1,0 +1,49 @@
+- name: Remove Bloatware
+  ansible.windows.win_powershell:
+    script: |
+      $patterns = @(
+        "*549981C3F5F10*",
+        "*Bing*",
+        "*Feedback*",
+        "*GetHelp*",
+        "*Getstarted*",
+        "*Microsoft3DViewer*",
+        "*MicrosoftOfficeHub*",
+        "*MicrosoftSolitaireCollection*",
+        "*MicrosoftStickyNotes*",
+        "*MixedReality*",
+        "*Office*",
+        "*OneNote*",
+        "*People*",
+        "*ScreenSketch*",
+        "*Skype*",
+        "*StorePurchaseApp*",
+        "*Wallet*",
+        "*Windows.Photos*",
+        "*WindowsAlarms*",
+        "*WindowsCamera*",
+        "*windowscommunicationsapps*",
+        "*WindowsFeedbackHub*",
+        "*WindowsMaps*",
+        "*WindowsSoundRecorder*",
+        "*YourPhone*",
+        "*ZuneMusic*",
+        "*ZuneVideo*",
+        "*Solitaire*",
+        "*Amazon*",
+        "*Disney*",
+        "*Spotify*",
+        "*Todos*",
+        "*WhatsApp*",
+        "*TikTok*",
+        "*Teams*",
+        "*QuickAssist*",
+        "*Facebook*",
+        "*Advertising.Xaml*"
+      )
+
+      foreach ($pattern in $patterns) {
+        $found = Get-AppxPackage "$pattern"
+        if ($found -eq $null) { continue }
+        Remove-AppxPackage "$found"
+      }

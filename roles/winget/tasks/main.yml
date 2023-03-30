@@ -1,0 +1,15 @@
+- name: Install WinGet Packages
+  win_shell: |
+    winget list --accept-source-agreements --exact --id "{{ item }}"
+    if ($LASTEXITCODE -ne 0) {
+      winget install --disable-interactivity --accept-source-agreements --exact --id "{{ item }}"
+    }
+  loop:
+    - Google.Chrome
+    - Google.Drive
+    - Notepad++.Notepad++
+    - Discord.Discord
+    - Valve.Steam
+    - 7zip.7zip
+    - JAMSoftware.TreeSize.Free
+    - PuTTY.PuTTY

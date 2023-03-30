@@ -1,0 +1,11 @@
+- name: Download Sycnex's Windows 10 Debloater
+  win_get_url:
+    url: https://raw.githubusercontent.com/Sycnex/Windows10Debloater/master/Windows10SysPrepDebloater.ps1
+    dest: C:\Windows10SysPrepDebloater.ps1
+    checksum_algorithm: sha512
+    checksum: 207fde856e6ea91b3ec26d6a2d6512d184ac231a5242845a9809d611f2fcd523e4a14af947d8de8fd4c4bf203763ceab6a61425cdfb99c502febdfc0ec3a66fc
+
+- name: Run Sycnex's Windows 10 Debloater
+  win_shell: |
+    cd C:\
+    .\Windows10SysPrepDebloater.ps1 -Sysprep -Debloat -Privacy

@@ -1,0 +1,51 @@
+- name: Regedit HKLM
+  win_regedit:
+    path: "HKLM:\\{{ item.path }}"
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+    type: "{{ item.type | default('dword') }}"
+    data: "{{ item.data | default('') }}"
+  loop: "{{ reg_hklm | regedit_dict2list }}"
+- name: Regedit HKLM 2
+  win_regedit:
+    path: "HKLM:\\{{ item.path }}"
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+    type: "{{ item.type | default('dword') }}"
+    data: "{{ item.data | default('') }}"
+  loop: "{{ reg_hkcu_and_hklm | regedit_dict2list }}"
+
+- name: Regedit HKCU
+  win_regedit:
+    path: "HKCU:\\{{ item.path }}"
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+    type: "{{ item.type | default('dword') }}"
+    data: "{{ item.data | default('') }}"
+  loop: "{{ reg_hkcu | regedit_dict2list }}"
+- name: Regedit HKCU 2
+  win_regedit:
+    path: "HKCU:\\{{ item.path }}"
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+    type: "{{ item.type | default('dword') }}"
+    data: "{{ item.data | default('') }}"
+  loop: "{{ reg_hkcu_and_hklm | regedit_dict2list }}"
+
+- name: Regedit HKCR
+  win_regedit:
+    path: "HKCR:\\{{ item.path }}"
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+    type: "{{ item.type | default('dword') }}"
+    data: "{{ item.data | default('') }}"
+  loop: "{{ reg_hkcr | regedit_dict2list }}"
+
+- name: Regedit HKU
+  win_regedit:
+    path: "HKU:\\{{ item.path }}"
+    name: "{{ item.name }}"
+    state: "{{ item.state | default('present') }}"
+    type: "{{ item.type | default('dword') }}"
+    data: "{{ item.data | default('') }}"
+  loop: "{{ reg_hku | regedit_dict2list }}"

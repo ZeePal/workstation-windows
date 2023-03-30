@@ -1,0 +1,30 @@
+- name: Unfuck services
+  win_service:
+    name: "{{ item }}"
+    start_mode: disabled
+    state: stopped
+  loop:
+    - CscService
+    - DiagTrack
+    - DmEnrollmentSvc
+    - Fax
+    - MapsBroker
+    - PushToInstall
+    - RasAuto
+    - RasMan
+    - RetailDemo
+    - SessionEnv
+    - spectrum
+    - TermService
+    - UmRdpService
+    - WinRM
+
+- name: Unfuck services 2
+  win_service:
+    name: "{{ item }}"
+    start_mode: manual
+    state: stopped
+  loop:
+    - Spooler
+    - TrkWks
+    - WbioSrvc

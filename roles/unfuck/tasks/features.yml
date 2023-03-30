@@ -1,0 +1,8 @@
+- name: Unfuck features
+  win_optional_feature:
+    name: "{{ item }}"
+    state: absent
+  loop:
+    - Internet-Explorer-Optional-amd64
+    - MSRDC-Infrastructure
+    - WorkFolders-Client

@@ -1,0 +1,213 @@
+# Content Delivery Manager
+Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager:
+  ContentDeliveryAllowed:
+    data: 0
+  FeatureManagementEnabled:
+    data: 0
+  OemPreInstalledAppsEnabled:
+    data: 0
+  PreInstalledAppsEnabled:
+    data: 0
+  PreInstalledAppsEverEnabled:
+    data: 0
+  RemediationRequired:
+    data: 0
+  RotatingLockScreenEnabled:
+    data: 0
+  RotatingLockScreenOverlayEnabled:
+    data: 0
+  SilentInstalledAppsEnabled:
+    data: 0
+  SoftLandingEnabled:
+    data: 0
+  SystemPaneSuggestionsEnabled:
+    data: 0
+  SubscribedContentEnabled:
+    data: 0
+  SubscribedContent-310093Enabled:
+    data: 0
+  SubscribedContent-314563Enabled:
+    data: 0
+  SubscribedContent-338387Enabled:
+    data: 0
+  SubscribedContent-338388Enabled:
+    data: 0
+  SubscribedContent-338389Enabled:
+    data: 0
+  SubscribedContent-338393Enabled:
+    data: 0
+  SubscribedContent-353694Enabled:
+    data: 0
+  SubscribedContent-353696Enabled:
+    data: 0
+  SubscribedContent-353698Enabled:
+    data: 0
+  SubscribedContent-88000326Enabled:
+    data: 0
+
+# Cloud Content
+Software\Policies\Microsoft\Windows\CloudContent:
+  ConfigureWindowsSpotlight:
+    data: 2
+  DisableTailoredExperiencesWithDiagnosticData:
+    data: 1
+  DisableThirdPartySuggestions:
+    data: 1
+  DisableWindowsSpotlightFeatures:
+    data: 1
+  DisableWindowsSpotlightOnActionCenter:
+    data: 1
+  DisableWindowsSpotlightOnSettings:
+    data: 1
+  DisableWindowsSpotlightWindowsWelcomeExperience:
+    data: 1
+  IncludeEnterpriseSpotlight:
+    data: 0
+
+# Edge
+Software\Policies\Microsoft\MicrosoftEdge\Main:
+  AllowPrelaunch:
+    data: 0
+Software\Policies\Microsoft\Microsoft Edge\Main:
+  AllowPrelaunch:
+    data: 0
+
+# Explorer
+Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced:
+  DisallowShaking:
+    data: 1
+  Hidden:
+    data: 1
+  HideDrivesWithNoMedia:
+    data: 0
+  HideDrivesWithNoMedias:
+    data: 0
+  HideFileExt:
+    data: 0
+  HideMergeConflicts:
+    data: 0
+  LaunchTo:
+    data: 1
+  NavPaneShowAllFolders:
+    data: 1
+  SeparateProcess:
+    data: 1
+  ShowCortanaButton:
+    data: 0
+  ShowEncryptCompressedColor:
+    data: 1
+  ShowSuperHidden:
+    data: 1
+  ShowSyncProviderNotifications:
+    data: 0
+  ShowTaskViewButton:
+    data: 0
+  TaskbarDa:
+    data: 0
+  TaskbarMn:
+    data: 0
+  Start_TrackProgs:
+    data: 0
+Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced\People:
+  PeopleBand:
+    data: 0
+Software\Microsoft\Windows\CurrentVersion\Search:
+  AllowSearchToUseLocation:
+    data: 0
+  BingSearchEnabled:
+    data: 0
+  CortanaConsent:
+    data: 0
+  SearchboxTaskbarMode:
+    data: 0
+Software\Microsoft\Windows\CurrentVersion\Explorer\Ribbon:
+  MinimizedStateTabletModeOff:
+    data: 1
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer:
+  ForceClassicControlPanel:
+    data: 1
+Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32: # Classic Right-click Menu
+  '(Default)':
+    type: none
+    data: ""
+Software\Microsoft\Windows\CurrentVersion\Explorer\AutoplayHandlers:
+  DisableAutoplay: # No autoplay explorer
+    data: 1
+Software\Microsoft\Windows\CurrentVersion\Themes\Personalize:
+  AppsUseLightTheme:
+    data: 0
+  SystemUsesLightTheme:
+    data: 0
+Control Panel\Desktop:
+  MenuShowDelay:
+    data: 20
+Control Panel\International:
+  sShortTime:
+    type: string
+    data: HH:mm
+  sTimeFormat:
+    type: string
+    data: HH:mm:ss
+  iTime:
+    type: string
+    data: "1"
+  sTime:
+    type: string
+    data: ":"
+  iTLZero:
+    type: string
+    data: "1"
+  iTimePrefix:
+    type: string
+    data: "0"
+  sShortDate:
+    type: string
+    data: yyyy-MM-dd
+  iDate:
+    type: string
+    data: "2"
+  sDate:
+    type: string
+    data: "-"
+
+# Sticky Keys
+Control Panel\Accessibility\Keyboard Response:
+  Flags:
+    type: string
+    data: 122
+Control Panel\Accessibility\StickyKeys:
+  Flags:
+    type: string
+    data: 506
+Control Panel\Accessibility\ToggleKeys:
+  Flags:
+    type: string
+    data: 58
+
+# Privacy
+Software\Microsoft\Windows\CurrentVersion\AdvertisingInfo:
+  Enabled:
+    data: 0
+Control Panel\International\User Profile:
+  HttpAcceptLanguageOptOut:
+    data: 1
+
+# Search
+Software\Microsoft\Windows\CurrentVersion\SearchSettings:
+  IsAADCloudSearchEnabled:
+    data: 0
+  IsDeviceSearchHistoryEnabled:
+    data: 0
+  IsDynamicSearchBoxEnabled:
+    data: 0
+  IsMSACloudSearchEnabled:
+    data: 0
+  SafeSearchMode:
+    data: 0
+
+
+Software\Microsoft\InputPersonalization:
+  RestrictImplicitInkCollection:
+    data: 1
+  RestrictImplicitTextCollection:
+    data: 1

@@ -1,0 +1,4 @@
+- name: Defrag all
+  win_defrag:
+    parallel: true
+    freespace_consolidation: true

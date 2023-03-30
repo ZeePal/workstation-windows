@@ -1,0 +1,26 @@
+- include_vars:
+    name: reg_hkcu
+    file: hkcu.yml
+- include_vars:
+    name: reg_hklm
+    file: hklm.yml
+- include_vars:
+    name: reg_hkcu_and_hklm
+    file: hkcu_and_hklm.yml
+- include_vars:
+    name: reg_hkcr
+    file: hkcr.yml
+- include_vars:
+    name: reg_hku
+    file: hku.yml
+
+- import_tasks: onedrive.yml
+- import_tasks: bloatware.yml
+- import_tasks: edge.yml
+- import_tasks: explorer.yml
+- import_tasks: services.yml
+
+- import_tasks: regedit.yml
+- import_tasks: features.yml
+
+- import_tasks: gpo.yml

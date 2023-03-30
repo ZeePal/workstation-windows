@@ -1,0 +1,171 @@
+# Cloud Content
+Software\Policies\Microsoft\Windows\CloudContent:
+  DisableThirdPartySuggestions:
+    data: 1
+  DisableWindowsConsumerFeatures:
+    data: 1
+  DisableSoftLanding:
+    data: 1
+  DisableCloudOptimizedContent:
+    data: 1
+  DisableConsumerAccountStateContent:
+    data: 1
+
+# Explorer
+Software\Policies\Microsoft\Windows\Windows Feeds:
+  EnableFeeds:
+    data: 0
+Software\Policies\Microsoft\Windows\Windows Search:
+  AllowCortana:
+    data: 0
+  DisableWebSearch:
+    data: 1
+  ConnectedSearchUseWeb:
+    data: 0
+  ConnectedSearchPrivacy:
+    data: 3
+
+# No "fast" start
+SYSTEM\CurrentControlSet\Control\Session Manager\Power:
+  HiberbootEnabled:
+    data: 0
+
+# OneDrive
+Software\Policies\Microsoft\Windows\OneDrive:
+  DisableFileSyncNGSC:
+    data: 1
+Software\Wow6432Node\Policies\Microsoft\Windows\OneDrive:
+  DisableFileSyncNGSC:
+    data: 1
+Software\Microsoft\Windows\CurrentVersion\Run:
+  OneDrive:
+    state: absent
+Software\Policies\Microsoft\Windows\DataCollection:
+  AllowTelemetry:
+    data: 1
+  DisableOneSettingsDownloads:
+    data: 1
+
+# Updates
+Software\Microsoft\WindowsUpdate\UX\Settings:
+  ActiveHoursStart:
+    data: 8
+  ActiveHoursEnd:
+    data: 0
+
+# Security
+Software\Microsoft\Windows\CurrentVersion\Policies\System:
+  MaxDevicePasswordFailedAttempts:
+    data: 10
+System\CurrentControlSet\Control\SAM:
+  MinimumPasswordLengthAudit:
+    data: 8
+System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedExactPaths:
+  Machine:
+    type: multistring
+    data: ""
+System\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths:
+  Machine:
+    type: multistring
+    data: ""
+
+# Privacy
+Software\Microsoft\Windows\CurrentVersion\Policies\TextInput:
+  AllowLinguisticDataCollection:
+    data: 0
+Software\Policies\Microsoft\Internet Explorer\SQM:
+  DisableCustomerImprovementProgram:
+    data: 0
+Software\Policies\Microsoft\SQMClient\Windows:
+  CEIPEnable:
+    data: 0
+Software\Policies\Microsoft\Windows\AdvertisingInfo:
+  DisabledByGroupPolicy:
+    data: 1
+Software\Policies\Microsoft\Windows\AppCompat:
+  AITEnable:
+    data: 0
+  DisableInventory:
+    data: 1
+
+
+Software\Policies\Microsoft\Windows\DeliveryOptimization:
+  DODownloadMode:
+    data: 0
+
+
+Software\Policies\Microsoft\Windows\DeviceInstall\Settings:
+  DisableSendGenericDriverNotFoundToWER:
+    data: 1
+
+
+Software\Policies\Microsoft\Windows\SettingSync:
+  DisableSettingSync:
+    data: 2
+  DisableSettingSyncUserOverride:
+    data: 1
+
+
+Software\Policies\Microsoft\Windows\System:
+  AllowClipboardHistory:
+    data: 0
+  AllowCrossDeviceClipboard:
+    data: 0
+  EnableActivityFeed:
+    data: 0
+  PublishUserActivities:
+    data: 0
+  UploadUserActivities:
+    data: 0
+
+
+Software\Policies\Microsoft\Windows\Windows Error Reporting:
+  Disabled:
+    data: 1
+
+
+Software\Policies\Microsoft\Dsh:
+  AllowNewsAndInterests:
+    data: 0
+
+
+Software\Policies\Microsoft\Windows\Windows Chat:
+  ChatIcon:
+    data: 3
+
+
+Software\Policies\Microsoft\Windows\Explorer:
+  HidetaskviewButton:
+    data: 1
+
+
+Software\Microsoft\Windows\CurrentVersion\Policies\Explorer:
+  AllowOnlineTips:
+    data: 0
+
+Software\Microsoft\OneDrive:
+  PreventNetworkTrafficPreUserSignIn:
+    data: 1
+
+
+Software\Policies\Microsoft\Windows\WindowsUpdate\AU:
+  NoAutoRebootWithLoggedOnUsers:
+    data: 1
+  NoAutoUpdate:
+    data: 0
+  AUOptions:
+    data: 3
+  AutomaticMaintenanceEnabled:
+    data: 0
+
+
+Software\Policies\Microsoft\Windows\AppPrivacy:
+  LetAppsActivateWithVoice:
+    data: 2
+  LetAppsActivateWithVoiceAboveLock:
+    data: 2
+
+
+SYSTEM\CurrentControlSet\Policies:
+  NtfsDisableCompression:
+    data: 1

@@ -1,0 +1,10 @@
+- hosts: all
+  roles:
+    - optimize_powershell
+    - power_management
+    - debloater
+    - unfuck
+    - mouse
+    - cleanmgr
+    - winget
+    - defrag

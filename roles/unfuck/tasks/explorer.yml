@@ -1,0 +1,14 @@
+# TODO: lock to only first execution
+- name: Remove all task bar shortcuts
+  win_regedit:
+    path: HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband
+    name: Favorites
+    state: absent
+
+- name: No desktop ini files
+  win_file:
+    path: "{{ item }}"
+    state: absent
+  loop:
+    - '%USERPROFILE%\Desktop\desktop.ini'
+    - 'C:\Users\Public\Desktop\desktop.ini'

@@ -1,0 +1,13 @@
+- name: Disable mouse acceleration
+  win_regedit:
+    path: HKCU:\Control Panel\Mouse
+    name: "{{ item }}"
+    data: 0
+    type: string
+  loop:
+    - MouseSpeed
+    - MouseThreshold1
+    - MouseThreshold2
+
+
+# TODO: set mouse speed to "2"

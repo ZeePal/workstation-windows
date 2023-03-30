@@ -1,0 +1,2 @@
+[win]
+172.28.23.8 ansible_connection=ssh ansible_shell_type=cmd ansible_user=test-workstation-win

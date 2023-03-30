@@ -1,0 +1,20 @@
+- name: Uninstall OneDrive
+  win_command:
+    cmd: "{{ item }} /uninstall"
+    removes: "{{ item }}"
+  ignore_errors: true  # complains if already uninstalled
+  loop:
+    - C:\Windows\SysWOW64\OneDriveSetup.exe
+    - C:\Windows\System32\OneDriveSetup.exe
+
+- name: Remove OneDrive
+  win_file:
+    state: absent
+    path: "{{ item }}"
+  ignore_errors: true  # complains if files still in use
+  loop:
+    - '%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk'
+    - '%USERPROFILE%\OneDrive'
+    - '%PROGRAMDATA%\Microsoft OneDrive'
+    - '%LOCALAPPDATA%\Microsoft\OneDrive'
+    - C:\OneDriveTemp

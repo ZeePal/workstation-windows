@@ -1,0 +1,43 @@
+- name: MaximumPasswordAge
+  win_security_policy:
+    section: System Access
+    key: MaximumPasswordAge
+    value: -1
+
+- name: MinimumPasswordLength
+  win_security_policy:
+    section: System Access
+    key: MinimumPasswordLength
+    value: 8
+
+- name: PasswordComplexity
+  win_security_policy:
+    section: System Access
+    key: PasswordComplexity
+    value: 1
+
+- name: LockoutBadCount
+  win_security_policy:
+    section: System Access
+    key: LockoutBadCount
+    value: 3
+
+- name: ResetLockoutCount
+  win_security_policy:
+    section: System Access
+    key: ResetLockoutCount
+    value: 1
+
+- name: LockoutDuration
+  win_security_policy:
+    section: System Access
+    key: LockoutDuration
+    value: 1
+
+- name: SeInteractiveLogonRight
+  win_user_right:
+    name: SeInteractiveLogonRight
+    users:
+      - Administrators
+      - Users
+    action: set

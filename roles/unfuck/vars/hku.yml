@@ -1,0 +1,4 @@
+# OneDrive
+Default\SOFTWARE\Microsoft\Windows\CurrentVersion\Run:
+  OneDrive:
+    state: absent

@@ -1,0 +1,2 @@
+- name: Clean All
+  win_command: cleanmgr /AUTOCLEAN

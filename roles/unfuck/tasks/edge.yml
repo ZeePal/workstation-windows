@@ -1,0 +1,5 @@
+- name: No desktop shortcut
+  win_file:
+    state: absent
+    #path: '{{ ansible_env.USERPROFILE }}\Desktop\Microsoft Edge.lnk'
+    path: '%USERPROFILE%\Desktop\Microsoft Edge.lnk'

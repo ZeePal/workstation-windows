@@ -1,0 +1,23 @@
+- name: Check for Ultimate Performance
+  win_command: powercfg /LIST
+  check_mode: false # always run the task
+  changed_when: false
+  register: power_plans
+
+- name: Duplicate Ultimate Performance
+  win_command: powercfg /DUPLICATESCHEME e9a42b02-d5df-448d-aa00-03f14749eb61
+  when: '"Ultimate Performance" not in power_plans.stdout'
+
+- name: Set power plan to Ultimate Performance
+  win_power_plan:
+    name: Ultimate Performance
+
+- name: Disable Hibernate
+  win_regedit:
+    path: HKLM:\SYSTEM\CurrentControlSet\Control\Power
+    name: HibernateEnabled
+    data: 0
+    type: dword
+
+- name: Disable Hibernate 2
+  win_command: powercfg /hibernate off
