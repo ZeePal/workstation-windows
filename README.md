@@ -6,28 +6,30 @@ Installation is intended to run on a my [Kubuntu workstation](https://github.com
 
 ## Installation
 ### Manual Pre-Steps on Windows
+- Login with Pin
 - Format Disks
 - Setup Page File(s)
-- Install Drivers
-- Login with Pin
+- Install [WinGet](https://www.microsoft.com/p/app-installer/9nblggh4nns1)
+- Run `PowerShell.exe -ExecutionPolicy Bypass -File scripts/prep_for_ansible.ps1`
+
+### Run on Kubuntu
+- Update Windows IP in `inventory` file
+- Update Windows Username in `inventory` file
+- Run: `ansible-playbook playbook.yml`
+  - If `winget` fucks you about, repeat:
+    - reboot
+    - start service: `OpenSSH SSH Server`
+    - continue ansible: `ansible-playbook playbook.yml --start-at-task="Install WinGet Packages"`
+
+### Manual Post-Steps on Windows
 - Move User Library Folders
   - Documents
   - Downloads
   - Music
   - Pictures
   - Videos
-- Install [WinGet](https://www.microsoft.com/p/app-installer/9nblggh4nns1)
-- Run `PowerShell.exe -ExecutionPolicy Bypass -File scripts/prep_for_ansible.ps1`
-
-
-### Run on Kubuntu
-- Update Windows IP in `inventory` file
-- Run: `ansible-playbook playbook.yml -u $WINDOWS_USERNAME`
-  - If `winget` fucks you about, reboot then continue ansible: `ansible-playbook playbook.yml -u $WINDOWS_USERNAME --start-at-task="Install WinGet Packages"`
-
-### Manual Post-Steps on Windows
-- Move User Library Folders
   - Google Drive
+- Install Drivers
 - Reboot
 
 
